@@ -238,7 +238,7 @@ public class studentlog extends javax.swing.JFrame {
        try{
             Class.forName("com.mysql.jdbc.Driver");
             Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/admin","root","1234");  
-            String sql="Select rollno, password from student where rollno=? and password=?";
+            String sql="Select rollno,S_ID from student where rollno=? and S_ID==?";
              PreparedStatement ps =con.prepareStatement(sql);
               ps.setString(1,t1.getText());
               ps.setString(2,p1.getText());
